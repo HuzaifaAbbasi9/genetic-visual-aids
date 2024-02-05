@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
+          rel="stylesheet">
+</head>
+
+<body>
+
+<nav class="navbar navbar-expand-lg">
+    <a class="navbar-brand" href="#">Genetic visual aids</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fas fa-bars fa-2x"></i>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="#">Menu</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Contact</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Donate</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+<div class="main-wraper">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-7 mx-auto steps-outer">
+                <div class="steps">
+                    <form class="form">
+                        <div class="step step-1 active-step">
+                            <div class="form-item">
+                                <input type="text" id="condation" autocomplete="off" value="" required>
+                                <label for="condation">Name of condition</label>
+                            </div>
+                        </div>
+                        <div class="step step-2">
+                            <div class="form-item">
+                                <h3 class="form-heading">Who is affected</h3>
+                                <div class="affected-outer">
+                                    <div class="affected-details">
+                                        <div class="affected-item both">
+                                            <i class="fas fa-check" aria-hidden="true"></i>
+                                            <div class="d-inline">
+                                                <i class="fas fa-female" aria-hidden="true"></i>
+                                                <i class="fas fa-male" aria-hidden="true"></i>
+                                            </div>
+                                            <h3>Females &amp; males</h3>
+                                        </div>
+                                    </div>
+                                    <div class="affected-details">
+                                        <div class="affected-item female">
+                                            <i class="fas fa-check" aria-hidden="true"></i>
+                                            <div class="d-inline">
+                                                <i class="fas fa-female" aria-hidden="true"></i>
+                                            </div>
+                                            <h3>Females</h3>
+                                        </div>
+                                    </div>
+                                    <div class="affected-details pr-0">
+                                        <div class="affected-item male">
+                                            <i class="fas fa-check" aria-hidden="true"></i>
+                                            <div class="d-inline">
+                                                <i class="fas fa-male" aria-hidden="true"></i>
+                                            </div>
+                                            <h3>Males</h3>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="step step-3">
+                            <div class="container-fluid p-lg-0">
+                                <div class="row">
+                                    <div class="col-lg-5 show-detsils show-both col-6 pl-lg-0 pr-lg-4 pl-0 pr-2">
+                                        <div class="text-center input-population">
+                                            <i class="fas fa-female" aria-hidden="true"></i>
+                                            <h3>females</h3>
+                                        </div>
+                                        <div class="form-item mt-3">
+                                            <input type="number" id="f-population" autocomplete="off" required>
+                                            <label for="f-population">
+                                                % <i class="fas fa-female" aria-hidden="true"></i> population
+                                            </label>
+                                        </div>
+                                        <div class="form-item mt-3">
+                                            <input type="number" id="f-condation" autocomplete="off" required>
+                                            <label for="f-condation">
+                                                % <i class="fas fa-female" aria-hidden="true"></i> condition
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-5 show-detsils show-both col-6 pl-lg-4 pr-lg-0 p-0 offset-lg-2">
+                                        <div class="text-center input-population">
+                                            <i class="fas fa-male" aria-hidden="true"></i>
+                                            <h3>males</h3>
+                                        </div>
+                                        <div class="form-item mt-3">
+                                            <input type="number" id="m-population" autocomplete="off" required>
+                                            <label for="m-population">
+                                                % <i class="fas fa-male" aria-hidden="true"></i> population
+                                            </label>
+                                        </div>
+                                        <div class="form-item mt-3">
+                                            <input type="number" id="m-condation" autocomplete="off" required>
+                                            <label for="m-condation">
+                                                % <i class="fas fa-male" aria-hidden="true"></i> condition
+                                            </label>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-12 show-detsils show-female">
+                                        <div class="text-center input-population">
+                                            <i class="fas fa-female" aria-hidden="true"></i>
+                                            <h3>females</h3>
+                                        </div>
+                                        <div class="form-item mt-3">
+                                            <input type="number" id="f-population-1" autocomplete="off" required>
+                                            <label for="f-population">
+                                                % <i class="fas fa-female" aria-hidden="true"></i> population
+                                            </label>
+                                        </div>
+                                        <div class="form-item mt-3">
+                                            <input type="number" id="f-condation-1" autocomplete="off" required>
+                                            <label for="f-condation">
+                                                % <i class="fas fa-female" aria-hidden="true"></i> condition
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 show-detsils show-male">
+                                        <div class="text-center input-population">
+                                            <i class="fas fa-male" aria-hidden="true"></i>
+                                            <h3>males</h3>
+                                        </div>
+                                        <div class="form-item mt-3">
+                                            <input type="number" id="m-population-1" autocomplete="off" required>
+                                            <label for="m-population">
+                                                % <i class="fas fa-male" aria-hidden="true"></i> population
+                                            </label>
+                                        </div>
+                                        <div class="form-item mt-3">
+                                            <input type="number" id="m-condation-1" autocomplete="off" required>
+                                            <label for="m-condation">
+                                                % <i class="fas fa-male" aria-hidden="true"></i> condition
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="btns-outer">
+                            <div class="inner-section">
+                                <button class="prev-btn d-none mr-2">PREV</button>
+                                <button class="next-btn">NEXT</button>
+                                <div class="steps-dots">
+                                    <div class="dot step-1-dot active-dot" data-target="step-1"></div>
+                                    <div class="dot step-2-dot" data-target="step-2"></div>
+                                    <div class="dot step-3-dot mr-0" data-target="step-3"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="col-12 d-none graph-outer">
+                <div class="graph d-none show-graph-both show-graph-both-m">
+                    <h3 class="disese-name">Breast cancer</h3>
+                    <div class="icon-outer">
+                        <i class="fas fa-male disese-attacked" aria-hidden="true"></i>
+                    </div>
+                    <div class="disese-details">
+                        <p class="m-population-p">7</p>
+                        <p>population</p>
+                        <p class="mt-2 m-conditon-p">80</p>
+                        <p class="">condition</p>
+                    </div>
+                    <div class="small-icon-outer">
+                        <i class="fas fa-male" aria-hidden="true"></i>
+                        <i class="fas fa-male" aria-hidden="true"></i>
+                        <i class="fas fa-male" aria-hidden="true"></i>
+                        <i class="fas fa-male" aria-hidden="true"></i>
+                        <i class="fas fa-male" aria-hidden="true"></i>
+                        <i class="fas fa-male" aria-hidden="true"></i>
+                        <i class="fas fa-male" aria-hidden="true"></i>
+                        <i class="fas fa-male" aria-hidden="true"></i>
+                        <i class="fas fa-male" aria-hidden="true"></i>
+                        <i class="fas fa-male" aria-hidden="true"></i>
+                        <i class="fas fa-male" aria-hidden="true"></i>
+                        <i class="fas fa-male" aria-hidden="true"></i>
+                        <i class="fas fa-male" aria-hidden="true"></i>
+                        <i class="fas fa-male" aria-hidden="true"></i>
+                        <i class="fas fa-male" aria-hidden="true"></i>
+                        <i class="fas fa-male" aria-hidden="true"></i>
+                        <i class="fas fa-male" aria-hidden="true"></i>
+                        <i class="fas fa-male" aria-hidden="true"></i>
+                        <i class="fas fa-male" aria-hidden="true"></i>
+                        <i class="fas fa-male" aria-hidden="true"></i>
+                        <i class="fas fa-male" aria-hidden="true"></i>
+                        <i class="fas fa-male" aria-hidden="true"></i>
+                        <i class="fas fa-male" aria-hidden="true"></i>
+                        <i class="fas fa-male" aria-hidden="true"></i>
+                        <i class="fas fa-male" aria-hidden="true"></i>
+                        <i class="fas fa-male" aria-hidden="true"></i>
+                        <i class="fas fa-male" aria-hidden="true"></i>
+                        <i class="fas fa-male" aria-hidden="true"></i>
+                        <i class="fas fa-male" aria-hidden="true"></i>
+                        <i class="fas fa-male" aria-hidden="true"></i>
+                        <i class="fas fa-male" aria-hidden="true"></i>
+                        <i class="fas fa-male" aria-hidden="true"></i>
+                        <i class="fas fa-male" aria-hidden="true"></i>
+                        <i class="fas fa-male" aria-hidden="true"></i>
+                        <i class="fas fa-male" aria-hidden="true"></i>
+                        <i class="fas fa-male" aria-hidden="true"></i>
+                        <i class="fas fa-male" aria-hidden="true"></i>
+                        <i class="fas fa-male" aria-hidden="true"></i>
+                        <i class="fas fa-male" aria-hidden="true"></i>
+                        <i class="fas fa-male" aria-hidden="true"></i>
+                        <i class="fas fa-male" aria-hidden="true"></i>
+                        <i class="fas fa-male" aria-hidden="true"></i>
+                        <i class="fas fa-male" aria-hidden="true"></i>
+                        <i class="fas fa-male" aria-hidden="true"></i>
+                        <i class="fas fa-male" aria-hidden="true"></i>
+                        <i class="fas fa-male" aria-hidden="true"></i>
+                        <i class="fas fa-male" aria-hidden="true"></i>
+                        <i class="fas fa-male" aria-hidden="true"></i>
+                        <i class="fas fa-male" aria-hidden="true"></i>
+                        <i class="fas fa-male" aria-hidden="true"></i>
+                        <i class="fas fa-male" aria-hidden="true"></i>
+                        <i class="fas fa-male" aria-hidden="true"></i>
+                        <i class="fas fa-male" aria-hidden="true"></i>
+                        <i class="fas fa-male" aria-hidden="true"></i>
+                        <i class="fas fa-male" aria-hidden="true"></i>
+                        <i class="fas fa-male" aria-hidden="true"></i>
+                        <i class="fas fa-male" aria-hidden="true"></i>
+                        <i class="fas fa-male" aria-hidden="true"></i>
+                        <i class="fas fa-male" aria-hidden="true"></i>
+                        <i class="fas fa-male" aria-hidden="true"></i>
+                        <i class="fas fa-male" aria-hidden="true"></i>
+                        <i class="fas fa-male" aria-hidden="true"></i>
+                        <i class="fas fa-male" aria-hidden="true"></i>
+                        <i class="fas fa-male" aria-hidden="true"></i>
+                        <i class="fas fa-male" aria-hidden="true"></i>
+                        <i class="fas fa-male" aria-hidden="true"></i>
+                        <i class="fas fa-male" aria-hidden="true"></i>
+                        <i class="fas fa-male" aria-hidden="true"></i>
+                        <i class="fas fa-male" aria-hidden="true"></i>
+                        <i class="fas fa-male" aria-hidden="true"></i>
+                        <i class="fas fa-male" aria-hidden="true"></i>
+                        <i class="fas fa-male" aria-hidden="true"></i>
+                        <i class="fas fa-male" aria-hidden="true"></i>
+                        <i class="fas fa-male" aria-hidden="true"></i>
+                        <i class="fas fa-male" aria-hidden="true"></i>
+                        <i class="fas fa-male" aria-hidden="true"></i>
+                        <i class="fas fa-male" aria-hidden="true"></i>
+                        <i class="fas fa-male" aria-hidden="true"></i>
+                        <i class="fas fa-male" aria-hidden="true"></i>
+                        <i class="fas fa-male" aria-hidden="true"></i>
+                        <i class="fas fa-male" aria-hidden="true"></i>
+                        <i class="fas fa-male" aria-hidden="true"></i>
+                        <i class="fas fa-male" aria-hidden="true"></i>
+                        <i class="fas fa-male" aria-hidden="true"></i>
+                        <i class="fas fa-male" aria-hidden="true"></i>
+                        <i class="fas fa-male" aria-hidden="true"></i>
+                        <i class="fas fa-male" aria-hidden="true"></i>
+                        <i class="fas fa-male" aria-hidden="true"></i>
+                        <i class="fas fa-male" aria-hidden="true"></i>
+                        <i class="fas fa-male" aria-hidden="true"></i>
+                        <i class="fas fa-male" aria-hidden="true"></i>
+                        <i class="fas fa-male" aria-hidden="true"></i>
+                        <i class="fas fa-male" aria-hidden="true"></i>
+                        <i class="fas fa-male" aria-hidden="true"></i>
+                        <i class="fas fa-male" aria-hidden="true"></i>
+                        <i class="fas fa-male" aria-hidden="true"></i>
+                        <i class="fas fa-male" aria-hidden="true"></i>
+                        <i class="fas fa-male" aria-hidden="true"></i>
+                        <i class="fas fa-male" aria-hidden="true"></i>
+                        <i class="fas fa-male" aria-hidden="true"></i>
+
+                    </div>
+                </div>
+                <div class="graph d-none show-graph-both show-graph-both-f both-graph">
+                    <h3 class="disese-name">Breast cancer</h3>
+                    <div class="icon-outer">
+                        <i class="fas fa-female disese-attacked" aria-hidden="true"></i>
+                    </div>
+                    <div class="disese-details">
+                        <p class="f-population-p">7</p>
+                        <p>population</p>
+                        <p class="mt-2 f-conditon">80</p>
+                        <p class="">condition</p>
+                    </div>
+                    <div class="small-icon-outer">
+                        <i class="fas fa-female" aria-hidden="true"></i>
+                        <i class="fas fa-female" aria-hidden="true"></i>
+                        <i class="fas fa-female" aria-hidden="true"></i>
+                        <i class="fas fa-female" aria-hidden="true"></i>
+                        <i class="fas fa-female" aria-hidden="true"></i>
+                        <i class="fas fa-female" aria-hidden="true"></i>
+                        <i class="fas fa-female" aria-hidden="true"></i>
+                        <i class="fas fa-female" aria-hidden="true"></i>
+                        <i class="fas fa-female" aria-hidden="true"></i>
+                        <i class="fas fa-female" aria-hidden="true"></i>
+                        <i class="fas fa-female" aria-hidden="true"></i>
+                        <i class="fas fa-female" aria-hidden="true"></i>
+                        <i class="fas fa-female" aria-hidden="true"></i>
+                        <i class="fas fa-female" aria-hidden="true"></i>
+                        <i class="fas fa-female" aria-hidden="true"></i>
+                        <i class="fas fa-female" aria-hidden="true"></i>
+                        <i class="fas fa-female" aria-hidden="true"></i>
+                        <i class="fas fa-female" aria-hidden="true"></i>
+                        <i class="fas fa-female" aria-hidden="true"></i>
+                        <i class="fas fa-female" aria-hidden="true"></i>
+                        <i class="fas fa-female" aria-hidden="true"></i>
+                        <i class="fas fa-female" aria-hidden="true"></i>
+                        <i class="fas fa-female" aria-hidden="true"></i>
+                        <i class="fas fa-female" aria-hidden="true"></i>
+                        <i class="fas fa-female" aria-hidden="true"></i>
+                        <i class="fas fa-female" aria-hidden="true"></i>
+                        <i class="fas fa-female" aria-hidden="true"></i>
+                        <i class="fas fa-female" aria-hidden="true"></i>
+                        <i class="fas fa-female" aria-hidden="true"></i>
+                        <i class="fas fa-female" aria-hidden="true"></i>
+                        <i class="fas fa-female" aria-hidden="true"></i>
+                        <i class="fas fa-female" aria-hidden="true"></i>
+                        <i class="fas fa-female" aria-hidden="true"></i>
+                        <i class="fas fa-female" aria-hidden="true"></i>
+                        <i class="fas fa-female" aria-hidden="true"></i>
+                        <i class="fas fa-female" aria-hidden="true"></i>
+                        <i class="fas fa-female" aria-hidden="true"></i>
+                        <i class="fas fa-female" aria-hidden="true"></i>
+                        <i class="fas fa-female" aria-hidden="true"></i>
+                        <i class="fas fa-female" aria-hidden="true"></i>
+                        <i class="fas fa-female" aria-hidden="true"></i>
+                        <i class="fas fa-female" aria-hidden="true"></i>
+                        <i class="fas fa-female" aria-hidden="true"></i>
+                        <i class="fas fa-female" aria-hidden="true"></i>
+                        <i class="fas fa-female" aria-hidden="true"></i>
+                        <i class="fas fa-female" aria-hidden="true"></i>
+                        <i class="fas fa-female" aria-hidden="true"></i>
+                        <i class="fas fa-female" aria-hidden="true"></i>
+                        <i class="fas fa-female" aria-hidden="true"></i>
+                        <i class="fas fa-female" aria-hidden="true"></i>
+                        <i class="fas fa-female" aria-hidden="true"></i>
+                        <i class="fas fa-female" aria-hidden="true"></i>
+                        <i class="fas fa-female" aria-hidden="true"></i>
+                        <i class="fas fa-female" aria-hidden="true"></i>
+                        <i class="fas fa-female" aria-hidden="true"></i>
+                        <i class="fas fa-female" aria-hidden="true"></i>
+                        <i class="fas fa-female" aria-hidden="true"></i>
+                        <i class="fas fa-female" aria-hidden="true"></i>
+                        <i class="fas fa-female" aria-hidden="true"></i>
+                        <i class="fas fa-female" aria-hidden="true"></i>
+                        <i class="fas fa-female" aria-hidden="true"></i>
+                        <i class="fas fa-female" aria-hidden="true"></i>
+                        <i class="fas fa-female" aria-hidden="true"></i>
+                        <i class="fas fa-female" aria-hidden="true"></i>
+                        <i class="fas fa-female" aria-hidden="true"></i>
+                        <i class="fas fa-female" aria-hidden="true"></i>
+                        <i class="fas fa-female" aria-hidden="true"></i>
+                        <i class="fas fa-female" aria-hidden="true"></i>
+                        <i class="fas fa-female" aria-hidden="true"></i>
+                        <i class="fas fa-female" aria-hidden="true"></i>
+                        <i class="fas fa-female" aria-hidden="true"></i>
+                        <i class="fas fa-female" aria-hidden="true"></i>
+                        <i class="fas fa-female" aria-hidden="true"></i>
+                        <i class="fas fa-female" aria-hidden="true"></i>
+                        <i class="fas fa-female" aria-hidden="true"></i>
+                        <i class="fas fa-female" aria-hidden="true"></i>
+                        <i class="fas fa-female" aria-hidden="true"></i>
+                        <i class="fas fa-female" aria-hidden="true"></i>
+                        <i class="fas fa-female" aria-hidden="true"></i>
+                        <i class="fas fa-female" aria-hidden="true"></i>
+                        <i class="fas fa-female" aria-hidden="true"></i>
+                        <i class="fas fa-female" aria-hidden="true"></i>
+                        <i class="fas fa-female" aria-hidden="true"></i>
+                        <i class="fas fa-female" aria-hidden="true"></i>
+                        <i class="fas fa-female" aria-hidden="true"></i>
+                        <i class="fas fa-female" aria-hidden="true"></i>
+                        <i class="fas fa-female" aria-hidden="true"></i>
+                        <i class="fas fa-female" aria-hidden="true"></i>
+                        <i class="fas fa-female" aria-hidden="true"></i>
+                        <i class="fas fa-female" aria-hidden="true"></i>
+                        <i class="fas fa-female" aria-hidden="true"></i>
+                        <i class="fas fa-female" aria-hidden="true"></i>
+                        <i class="fas fa-female" aria-hidden="true"></i>
+                        <i class="fas fa-female" aria-hidden="true"></i>
+                        <i class="fas fa-female" aria-hidden="true"></i>
+                        <i class="fas fa-female" aria-hidden="true"></i>
+                        <i class="fas fa-female" aria-hidden="true"></i>
+                        <i class="fas fa-female" aria-hidden="true"></i>
+                        <i class="fas fa-female" aria-hidden="true"></i>
+                        <i class="fas fa-female" aria-hidden="true"></i>
+                    </div>
+                </div>
+                <div class="graph d-none show-male-graph">
+                    <h3 class="disese-name">Breast cancer</h3>
+                    <div class="icon-outer">
+                        <i class="fas fa-male disese-attacked" aria-hidden="true"></i>
+                    </div>
+                    <div class="disese-details">
+                        <p class="m-population-p">7</p>
+                        <p>population</p>
+                        <p class="mt-2 m-conditon-p">80</p>
+                        <p class="">condition</p>
+                    </div>
+                    <div class="small-icon-outer">
+                        <i class="fas fa-male" aria-hidden="true"></i>
+                        <i class="fas fa-male" aria-hidden="true"></i>
+                        <i class="fas fa-male" aria-hidden="true"></i>
+                        <i class="fas fa-male" aria-hidden="true"></i>
+                        <i class="fas fa-male" aria-hidden="true"></i>
+                        <i class="fas fa-male" aria-hidden="true"></i>
+                        <i class="fas fa-male" aria-hidden="true"></i>
+                        <i class="fas fa-male" aria-hidden="true"></i>
+                        <i class="fas fa-male" aria-hidden="true"></i>
+                        <i class="fas fa-male" aria-hidden="true"></i>
+                        <i class="fas fa-male" aria-hidden="true"></i>
+                        <i class="fas fa-male" aria-hidden="true"></i>
+                        <i class="fas fa-male" aria-hidden="true"></i>
+                        <i class="fas fa-male" aria-hidden="true"></i>
+                        <i class="fas fa-male" aria-hidden="true"></i>
+                        <i class="fas fa-male" aria-hidden="true"></i>
+                        <i class="fas fa-male" aria-hidden="true"></i>
+                        <i class="fas fa-male" aria-hidden="true"></i>
+                        <i class="fas fa-male" aria-hidden="true"></i>
+                        <i class="fas fa-male" aria-hidden="true"></i>
+                        <i class="fas fa-male" aria-hidden="true"></i>
+                        <i class="fas fa-male" aria-hidden="true"></i>
+                        <i class="fas fa-male" aria-hidden="true"></i>
+                        <i class="fas fa-male" aria-hidden="true"></i>
+                        <i class="fas fa-male" aria-hidden="true"></i>
+                        <i class="fas fa-male" aria-hidden="true"></i>
+                        <i class="fas fa-male" aria-hidden="true"></i>
+                        <i class="fas fa-male" aria-hidden="true"></i>
+                        <i class="fas fa-male" aria-hidden="true"></i>
+                        <i class="fas fa-male" aria-hidden="true"></i>
+                        <i class="fas fa-male" aria-hidden="true"></i>
+                        <i class="fas fa-male" aria-hidden="true"></i>
+                        <i class="fas fa-male" aria-hidden="true"></i>
+                        <i class="fas fa-male" aria-hidden="true"></i>
+                        <i class="fas fa-male" aria-hidden="true"></i>
+                        <i class="fas fa-male" aria-hidden="true"></i>
+                        <i class="fas fa-male" aria-hidden="true"></i>
+                        <i class="fas fa-male" aria-hidden="true"></i>
+                        <i class="fas fa-male" aria-hidden="true"></i>
+                        <i class="fas fa-male" aria-hidden="true"></i>
+                        <i class="fas fa-male" aria-hidden="true"></i>
+                        <i class="fas fa-male" aria-hidden="true"></i>
+                        <i class="fas fa-male" aria-hidden="true"></i>
+                        <i class="fas fa-male" aria-hidden="true"></i>
+                        <i class="fas fa-male" aria-hidden="true"></i>
+                        <i class="fas fa-male" aria-hidden="true"></i>
+                        <i class="fas fa-male" aria-hidden="true"></i>
+                        <i class="fas fa-male" aria-hidden="true"></i>
+                        <i class="fas fa-male" aria-hidden="true"></i>
+                        <i class="fas fa-male" aria-hidden="true"></i>
+                        <i class="fas fa-male" aria-hidden="true"></i>
+                        <i class="fas fa-male" aria-hidden="true"></i>
+                        <i class="fas fa-male" aria-hidden="true"></i>
+                        <i class="fas fa-male" aria-hidden="true"></i>
+                        <i class="fas fa-male" aria-hidden="true"></i>
+                        <i class="fas fa-male" aria-hidden="true"></i>
+                        <i class="fas fa-male" aria-hidden="true"></i>
+                        <i class="fas fa-male" aria-hidden="true"></i>
+                        <i class="fas fa-male" aria-hidden="true"></i>
+                        <i class="fas fa-male" aria-hidden="true"></i>
+                        <i class="fas fa-male" aria-hidden="true"></i>
+                        <i class="fas fa-male" aria-hidden="true"></i>
+                        <i class="fas fa-male" aria-hidden="true"></i>
+                        <i class="fas fa-male" aria-hidden="true"></i>
+                        <i class="fas fa-male" aria-hidden="true"></i>
+                        <i class="fas fa-male" aria-hidden="true"></i>
+                        <i class="fas fa-male" aria-hidden="true"></i>
+                        <i class="fas fa-male" aria-hidden="true"></i>
+                        <i class="fas fa-male" aria-hidden="true"></i>
+                        <i class="fas fa-male" aria-hidden="true"></i>
+                        <i class="fas fa-male" aria-hidden="true"></i>
+                        <i class="fas fa-male" aria-hidden="true"></i>
+                        <i class="fas fa-male" aria-hidden="true"></i>
+                        <i class="fas fa-male" aria-hidden="true"></i>
+                        <i class="fas fa-male" aria-hidden="true"></i>
+                        <i class="fas fa-male" aria-hidden="true"></i>
+                        <i class="fas fa-male" aria-hidden="true"></i>
+                        <i class="fas fa-male" aria-hidden="true"></i>
+                        <i class="fas fa-male" aria-hidden="true"></i>
+                        <i class="fas fa-male" aria-hidden="true"></i>
+                        <i class="fas fa-male" aria-hidden="true"></i>
+                        <i class="fas fa-male" aria-hidden="true"></i>
+                        <i class="fas fa-male" aria-hidden="true"></i>
+                        <i class="fas fa-male" aria-hidden="true"></i>
+                        <i class="fas fa-male" aria-hidden="true"></i>
+                        <i class="fas fa-male" aria-hidden="true"></i>
+                        <i class="fas fa-male" aria-hidden="true"></i>
+                        <i class="fas fa-male" aria-hidden="true"></i>
+                        <i class="fas fa-male" aria-hidden="true"></i>
+                        <i class="fas fa-male" aria-hidden="true"></i>
+                        <i class="fas fa-male" aria-hidden="true"></i>
+                        <i class="fas fa-male" aria-hidden="true"></i>
+                        <i class="fas fa-male" aria-hidden="true"></i>
+                        <i class="fas fa-male" aria-hidden="true"></i>
+                        <i class="fas fa-male" aria-hidden="true"></i>
+                        <i class="fas fa-male" aria-hidden="true"></i>
+                        <i class="fas fa-male" aria-hidden="true"></i>
+                        <i class="fas fa-male" aria-hidden="true"></i>
+                        <i class="fas fa-male" aria-hidden="true"></i>
+                        <i class="fas fa-male" aria-hidden="true"></i>
+                    </div>
+                </div>
+                <div class="graph d-none show-female-graph">
+                    <h3 class="disese-name">Breast cancer</h3>
+                    <div class="icon-outer">
+                        <i class="fas fa-female disese-attacked" aria-hidden="true"></i>
+                    </div>
+                    <div class="disese-details">
+                        <p class="f-population-p">7</p>
+                        <p>population</p>
+                        <p class="mt-2 f-conditon">80</p>
+                        <p class="">condition</p>
+                    </div>
+                    <div class="small-icon-outer">
+                        <i class="fas fa-female" aria-hidden="true"></i>
+                        <i class="fas fa-female" aria-hidden="true"></i>
+                        <i class="fas fa-female" aria-hidden="true"></i>
+                        <i class="fas fa-female" aria-hidden="true"></i>
+                        <i class="fas fa-female" aria-hidden="true"></i>
+                        <i class="fas fa-female" aria-hidden="true"></i>
+                        <i class="fas fa-female" aria-hidden="true"></i>
+                        <i class="fas fa-female" aria-hidden="true"></i>
+                        <i class="fas fa-female" aria-hidden="true"></i>
+                        <i class="fas fa-female" aria-hidden="true"></i>
+                        <i class="fas fa-female" aria-hidden="true"></i>
+                        <i class="fas fa-female" aria-hidden="true"></i>
+                        <i class="fas fa-female" aria-hidden="true"></i>
+                        <i class="fas fa-female" aria-hidden="true"></i>
+                        <i class="fas fa-female" aria-hidden="true"></i>
+                        <i class="fas fa-female" aria-hidden="true"></i>
+                        <i class="fas fa-female" aria-hidden="true"></i>
+                        <i class="fas fa-female" aria-hidden="true"></i>
+                        <i class="fas fa-female" aria-hidden="true"></i>
+                        <i class="fas fa-female" aria-hidden="true"></i>
+                        <i class="fas fa-female" aria-hidden="true"></i>
+                        <i class="fas fa-female" aria-hidden="true"></i>
+                        <i class="fas fa-female" aria-hidden="true"></i>
+                        <i class="fas fa-female" aria-hidden="true"></i>
+                        <i class="fas fa-female" aria-hidden="true"></i>
+                        <i class="fas fa-female" aria-hidden="true"></i>
+                        <i class="fas fa-female" aria-hidden="true"></i>
+                        <i class="fas fa-female" aria-hidden="true"></i>
+                        <i class="fas fa-female" aria-hidden="true"></i>
+                        <i class="fas fa-female" aria-hidden="true"></i>
+                        <i class="fas fa-female" aria-hidden="true"></i>
+                        <i class="fas fa-female" aria-hidden="true"></i>
+                        <i class="fas fa-female" aria-hidden="true"></i>
+                        <i class="fas fa-female" aria-hidden="true"></i>
+                        <i class="fas fa-female" aria-hidden="true"></i>
+                        <i class="fas fa-female" aria-hidden="true"></i>
+                        <i class="fas fa-female" aria-hidden="true"></i>
+                        <i class="fas fa-female" aria-hidden="true"></i>
+                        <i class="fas fa-female" aria-hidden="true"></i>
+                        <i class="fas fa-female" aria-hidden="true"></i>
+                        <i class="fas fa-female" aria-hidden="true"></i>
+                        <i class="fas fa-female" aria-hidden="true"></i>
+                        <i class="fas fa-female" aria-hidden="true"></i>
+                        <i class="fas fa-female" aria-hidden="true"></i>
+                        <i class="fas fa-female" aria-hidden="true"></i>
+                        <i class="fas fa-female" aria-hidden="true"></i>
+                        <i class="fas fa-female" aria-hidden="true"></i>
+                        <i class="fas fa-female" aria-hidden="true"></i>
+                        <i class="fas fa-female" aria-hidden="true"></i>
+                        <i class="fas fa-female" aria-hidden="true"></i>
+                        <i class="fas fa-female" aria-hidden="true"></i>
+                        <i class="fas fa-female" aria-hidden="true"></i>
+                        <i class="fas fa-female" aria-hidden="true"></i>
+                        <i class="fas fa-female" aria-hidden="true"></i>
+                        <i class="fas fa-female" aria-hidden="true"></i>
+                        <i class="fas fa-female" aria-hidden="true"></i>
+                        <i class="fas fa-female" aria-hidden="true"></i>
+                        <i class="fas fa-female" aria-hidden="true"></i>
+                        <i class="fas fa-female" aria-hidden="true"></i>
+                        <i class="fas fa-female" aria-hidden="true"></i>
+                        <i class="fas fa-female" aria-hidden="true"></i>
+                        <i class="fas fa-female" aria-hidden="true"></i>
+                        <i class="fas fa-female" aria-hidden="true"></i>
+                        <i class="fas fa-female" aria-hidden="true"></i>
+                        <i class="fas fa-female" aria-hidden="true"></i>
+                        <i class="fas fa-female" aria-hidden="true"></i>
+                        <i class="fas fa-female" aria-hidden="true"></i>
+                        <i class="fas fa-female" aria-hidden="true"></i>
+                        <i class="fas fa-female" aria-hidden="true"></i>
+                        <i class="fas fa-female" aria-hidden="true"></i>
+                        <i class="fas fa-female" aria-hidden="true"></i>
+                        <i class="fas fa-female" aria-hidden="true"></i>
+                        <i class="fas fa-female" aria-hidden="true"></i>
+                        <i class="fas fa-female" aria-hidden="true"></i>
+                        <i class="fas fa-female" aria-hidden="true"></i>
+                        <i class="fas fa-female" aria-hidden="true"></i>
+                        <i class="fas fa-female" aria-hidden="true"></i>
+                        <i class="fas fa-female" aria-hidden="true"></i>
+                        <i class="fas fa-female" aria-hidden="true"></i>
+                        <i class="fas fa-female" aria-hidden="true"></i>
+                        <i class="fas fa-female" aria-hidden="true"></i>
+                        <i class="fas fa-female" aria-hidden="true"></i>
+                        <i class="fas fa-female" aria-hidden="true"></i>
+                        <i class="fas fa-female" aria-hidden="true"></i>
+                        <i class="fas fa-female" aria-hidden="true"></i>
+                        <i class="fas fa-female" aria-hidden="true"></i>
+                        <i class="fas fa-female" aria-hidden="true"></i>
+                        <i class="fas fa-female" aria-hidden="true"></i>
+                        <i class="fas fa-female" aria-hidden="true"></i>
+                        <i class="fas fa-female" aria-hidden="true"></i>
+                        <i class="fas fa-female" aria-hidden="true"></i>
+                        <i class="fas fa-female" aria-hidden="true"></i>
+                        <i class="fas fa-female" aria-hidden="true"></i>
+                        <i class="fas fa-female" aria-hidden="true"></i>
+                        <i class="fas fa-female" aria-hidden="true"></i>
+                        <i class="fas fa-female" aria-hidden="true"></i>
+                        <i class="fas fa-female" aria-hidden="true"></i>
+                        <i class="fas fa-female" aria-hidden="true"></i>
+                        <i class="fas fa-female" aria-hidden="true"></i>
+                        <i class="fas fa-female" aria-hidden="true"></i>
+                    </div>
+                </div>
+                <div class="mt-5 text-center">
+                    <button class="go-back">Go Back</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<footer>
+    <a href="#" class="footer-link">Element</a>
+    <a href="#" class="footer-link">Element</a>
+    <a href="#" class="footer-link">email@email.com</a>
+    <a href="#" class="footer-link">
+        <i class="fab fa-twitter mr-2"></i>
+        <i class="fab fa-facebook-f"></i>
+    </a>
+</footer>
+
+<script src=" assets/js/jquery.min.js"></script>
+<script src="assets/js/popper.min.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+<script src="assets/js/sript.js"></script>
+</body>
+</html>
